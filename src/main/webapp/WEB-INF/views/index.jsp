@@ -18,12 +18,12 @@
 		</tr>
 		<tr>
 			<td align="center">
-				<span class="title02">이거저거 아무말이나 적어놓기</span>
+				<span class="title02">프로필 사이트 만들기</span>
 			</td>
 		</tr>
 		<tr>
 			<td>
-				<table width="70%" border="0" cellpadding="10" cellspacing="0">
+				<table width="100%" border="0" cellpadding="10" cellspacing="0">
 					<tr>
 						<td bgcolor="#d5d5d5"><span class="title03">J</span><span class="title04">AVA</span></td>
 						<td rowspan="6" bgcolor="#353535" align="center">
