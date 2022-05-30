@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+span.title01 {
+	
+	font-size: 60px;
+	color: #000000;
+	font-family: Arial;
+	font-weight: bold;	
+}
+
+span.title02 {
+	
+	font-size: 20px;
+	color: #c0c0c0;
+	font-family: Arial;
+	font-weight: normal;	
+}
+
+span.title03 {
+	
+	font-size: 60px;
+	color: #ffffff;
+	font-family: Arial;
+	font-weight: bold;	
+}
+
+span.title04 {
+	
+	font-size: 40px;
+	color: #3b3b3b;
+	font-family: Arial;
+	font-weight: bold;	
+}
