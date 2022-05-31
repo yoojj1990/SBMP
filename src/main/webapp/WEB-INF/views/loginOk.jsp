@@ -28,26 +28,35 @@
 				<table width="110%" border="0" cellpadding="10" cellspacing="0">
 					<tr height="550">
 						<td bgcolor="#d5d5d5" align="center">
-							
+						
 							<% 
 								int checkId = Integer.parseInt(request.getAttribute("checkId").toString());
-								if(checkId == 1){
+								int checkPw = Integer.parseInt(request.getAttribute("checkPw").toString());
+								
+								if(checkId == 0){
 							%>
 									<script type="text/javascript">
-										alert("입력하신 아이디는 사용중입니다. 다른 아이디를 사용해주세요.");
+										alert("입력하신 아이디는 존재하지않는 아이디입니다. 아이디를 확인해주세요.");
 										history.go(-1);
-										reg_frm.mid.focus();
+										document.reg_frm.mid.focus();
 									</script>
 							<%
+								} else if(checkPw == 0) {
+							%>
+									<script type="text/javascript">
+										alert("입력하신 비밀번호가 틀립니다. 비밀번호를 확인해주세요.");
+										history.go(-1);
+										document.reg_frm.mid.focus();
+									</script>
+							<% 		
+								} else {
+									session.setAttribute("validMem", "yes");
 								}
 							%>
-							
-							
-							
 							<span class="content01">
 								안녕하세요.<br>
-								${mname }님 가입을 환영합니다.<br>
-								가입하신 아이디는 ${mid }입니다.<br>
+								${mname }님 로그인을 환영합니다.<br>
+								로그인하신 아이디는 ${mid }입니다.<br>
 							</span>
 						<td>
 					</tr>

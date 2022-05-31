@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/title.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/content.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/member.css">
+<script type="text/javascript" src="${pageContext.request.contextPath }/resources/js/join.js"></script>
 
 <title>## YJJ Profile Web</title>
 </head>
@@ -30,7 +31,7 @@
 					<tr height="550">
 						<td bgcolor="#d5d5d5" align="center" height="500">
 							<table border="0" cellpadding="10" cellspacing="0">
-								<form action="joinOk" method="post" name="join_frm">
+								<form action="joinOk" method="post" name="reg_frm">
 									<tr>
 										<td>
 											<span class="text01">MEMBER ID : </span>
@@ -71,8 +72,7 @@
 									</tr>
 									<tr>
 										<td colspan="2">
-											<input class="button01" type="submit" value="가입">&nbsp;&nbsp;
-											<!-- <input class="button01" type="button" value="회원가입" onclick="">&nbsp;&nbsp; -->
+											<input class="button01" type="button" value="회원가입" onclick="joinCheck()">&nbsp;&nbsp;
 											<input class="button01" type="button" value="로그인" onclick="location.href='login'">
 										</td>
 									</tr>
