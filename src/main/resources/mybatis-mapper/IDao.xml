@@ -5,7 +5,21 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 	
 <mapper namespace="com.yjj.myprofile.dao.IDao">
-
+	
+	<!-- member SQL -->
+	
+	<insert id="joinDao">
+		INSERT INTO q_member(mid, mpw, mname, memail) VALUES (#{param1}, #{param2}, #{param3}, #{param4})
+	</insert>
+	
+	<select id="checkIdDao" resultType="int">
+		SELECT COUNT(*) FROM q_member WHERE mid =#{param1 }
+	</select>
+	
+	<!-- board SQL -->
+	
+	
+	
 </mapper>
 
 

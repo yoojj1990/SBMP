@@ -71,7 +71,8 @@
 									</tr>
 									<tr>
 										<td colspan="2">
-											<input class="button01" type="button" value="회원가입" onclick="">&nbsp;&nbsp;
+											<input class="button01" type="submit" value="가입">&nbsp;&nbsp;
+											<!-- <input class="button01" type="button" value="회원가입" onclick="">&nbsp;&nbsp; -->
 											<input class="button01" type="button" value="로그인" onclick="location.href='login'">
 										</td>
 									</tr>

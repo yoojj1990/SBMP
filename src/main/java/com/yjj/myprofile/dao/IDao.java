@@ -6,6 +6,7 @@ public interface IDao {
 	
 	public void joinDao(String mid, String mpw, String mname, String memail); // 회원가입 메서드
 	
+	public int checkIdDao(String mid); //회원가입시 기존 id존재여부 체크
 	
 	
 	
