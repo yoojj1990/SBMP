@@ -14,6 +14,8 @@ public interface IDao {
 	
 	public MemberDto loginInfoDao(String mid); // 로그인한 회원의 모든 정보를 DB에서 가져오는 메서드
 	
+	public void infoModify(String mpw, String mname, String memail, String mid); //회원 정보 수정
+	
 	// 질문 게시판 관련 dao 메서드
 	
 	

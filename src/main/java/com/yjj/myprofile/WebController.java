@@ -133,9 +133,29 @@ public class WebController {
 	}
 	
 	
+	@RequestMapping(value = "/logout")
+	public String logout(HttpSession session) {
+		
+		session.invalidate(); // 세션 내용 삭제
+		
+		return "login";
+	}
 	
-	
-	
+	@RequestMapping(value = "/infoModify")
+	public String infoModify(HttpServletRequest request, Model model) {
+		
+		HttpSession session = request.getSession();
+		
+		String sessionId = (String) session.getAttribute("id");
+		
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+		MemberDto memberDto = dao.loginInfoDao(sessionId);
+		
+		model.addAttribute("memberDto", memberDto);
+		
+		return "infoModify";
+	}
 	
 	
 	
