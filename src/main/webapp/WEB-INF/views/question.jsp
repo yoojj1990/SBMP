@@ -30,38 +30,32 @@
 					<tr height="550">
 						<td bgcolor="#d5d5d5" align="center" height="500">
 							<table border="0" cellpadding="10" cellspacing="0">
-								<form action="joinOk" method="post" name="join_frm">
+								<form action="writes" method="post" name="question_frm">
 									<tr>
 										<td>
-											<span class="text01">MEMBER ID : </span>
+											<span class="text01">ID : </span>
 										</td>
 										<td>
-											<input class="type01" type="text" name="id">
+											<input class="type01" type="text" name="qid">
 										</td>
 									</tr>
 									<tr>
-										<td>
-											<span class="text01">PASSWORD : </span>
-										</td>
-										<td>
-											<input class="type01" type="password" name="pw">
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<span class="text01">PW CHECK : </span>
-										</td>
-										<td>
-											<input class="type01" type="password" name="pw_check">
-										</td>
-									</tr><tr>
 										<td>
 											<span class="text01">NAME : </span>
 										</td>
 										<td>
-											<input class="type01" type="text" name="name">
+											<input class="type01" type="text" name="qname">
 										</td>
-									</tr><tr>
+									</tr>
+									<tr>
+										<td>
+											<span class="text01">QUESTION : </span>
+										</td>
+										<td>
+											<textarea id="textarea01" rows="5" cols="30" name="qcontent"></textarea>
+										</td>
+									</tr>
+									<tr>
 										<td>
 											<span class="text01">E-MAIL : </span>
 										</td>
@@ -71,8 +65,8 @@
 									</tr>
 									<tr>
 										<td colspan="2">
-											<input class="button01" type="button" value="회원가입" onclick="">&nbsp;&nbsp;
-											<input class="button01" type="button" value="로그인" onclick="location.href='login'">
+											<input class="button01" type="button" value="글쓰기" onclick="">&nbsp;&nbsp;
+											<input class="button01" type="button" value="글목록" onclick="location.href='list'">
 										</td>
 									</tr>
 								</form>
