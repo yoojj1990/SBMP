@@ -85,6 +85,7 @@ public class WebController {
 			// 세션에 로그인 상태 올리기
 			HttpSession session = request.getSession();
 			session.setAttribute("id", mid);
+			session.setAttribute("name", mname);
 			
 			// ${}사용하게 모델에 실어서 보내기
 			model.addAttribute("mname", mname);
@@ -158,8 +159,19 @@ public class WebController {
 	}
 	
 	
-	
-	
+	@RequestMapping(value = "/infoModifyOk")
+	public String infoModifyOk(HttpServletRequest request, Model model) {
+		
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+		dao.infoModify(request.getParameter("mpw"), request.getParameter("mname"), request.getParameter("memail"), request.getParameter("mid"));
+		
+		MemberDto memberDto = dao.loginInfoDao(request.getParameter("mid"));
+		
+		model.addAttribute("memberDto", memberDto);
+		
+		return "infoModifyOk";
+	}
 	
 	
 	

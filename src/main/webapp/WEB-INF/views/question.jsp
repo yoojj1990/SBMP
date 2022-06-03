@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/title.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/content.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/member.css">
-
+<script type="text/javascript" src="${pageContext.request.contextPath }/resources/js/board.js"></script>
 <title>## YJJ Profile Web</title>
 </head>
 <body>
@@ -36,7 +36,7 @@
 											<span class="text01">ID : </span>
 										</td>
 										<td>
-											<input class="type01" type="text" name="qid">
+											<input class="type01" type="text" name="qid" value="<% if(session.getAttribute("id") != null) { out.print(session.getAttribute("id")); } else { out.print("GUEST");} %>" readonly>
 										</td>
 									</tr>
 									<tr>
@@ -44,7 +44,7 @@
 											<span class="text01">NAME : </span>
 										</td>
 										<td>
-											<input class="type01" type="text" name="qname">
+											<input class="type01" type="text" name="qname" value="<% if(session.getAttribute("name") != null) { out.print(session.getAttribute("name")); } else { out.print("");} %>">
 										</td>
 									</tr>
 									<tr>
@@ -60,12 +60,12 @@
 											<span class="text01">E-MAIL : </span>
 										</td>
 										<td>
-											<input class="type01" type="text" name="email">
+											<input class="type01" type="text" name="qemail">
 										</td>
 									</tr>
 									<tr>
 										<td colspan="2">
-											<input class="button01" type="button" value="글쓰기" onclick="">&nbsp;&nbsp;
+											<input class="button01" type="button" value="글쓰기" onclick="boardConfirm()">&nbsp;&nbsp;
 											<input class="button01" type="button" value="글목록" onclick="location.href='list'">
 										</td>
 									</tr>
