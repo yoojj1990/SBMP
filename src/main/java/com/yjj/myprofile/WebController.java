@@ -7,12 +7,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.apache.ibatis.session.SqlSession;
+import org.apache.taglibs.standard.lang.jstl.test.beans.PublicBean1;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.thymeleaf.util.Validate;
 
+import com.fasterxml.jackson.annotation.JacksonInject.Value;
 import com.yjj.myprofile.dao.IDao;
 import com.yjj.myprofile.dto.BoardDto;
 import com.yjj.myprofile.dto.MemberDto;
@@ -186,7 +189,6 @@ public class WebController {
 		return "redirect:list";
 	}
 	
-	
 	@RequestMapping(value = "/list")
 	public String list(Model model) {
 		
@@ -194,19 +196,57 @@ public class WebController {
 		
 		ArrayList<BoardDto> boardDtos = dao.listDao();
 		
+		
 		model.addAttribute("qlist", boardDtos);
 		
 		return "list";
 	}
 	
 	
+	@RequestMapping(value = "/qview")
+	public String qview(HttpServletRequest request, Model model) {
+		
+		String qnum = request.getParameter("qnum");
+		
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+		BoardDto boardDto = dao.viewDao(qnum);
+		
+		model.addAttribute("boardDto", boardDto);
+		model.addAttribute("boardId", boardDto.getQid());
+		
+		
+		return "qview";
+	}
 	
 	
+	@RequestMapping(value = "/boardModify")
+	public String boardModify(HttpServletRequest request) {
+		
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+		String qnum = request.getParameter("qnum");
+		String qname = request.getParameter("qname");
+		String qcontent = request.getParameter("qcontent");
+		String qemail = request.getParameter("qemail");
+		
+		dao.boardModify(qname, qcontent, qemail, qnum);
+		
+		return "redirect:list";
+	}
 	
 	
-	
-	
-	
+	@RequestMapping(value = "/delete")
+	public String delete(HttpServletRequest request) {
+		
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+		String qnum = request.getParameter("qnum");
+		
+		dao.deleteDao(qnum);
+		
+		return "redirect:list";
+	}
 	
 	
 }

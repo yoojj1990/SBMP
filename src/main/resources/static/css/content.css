@@ -8,3 +8,9 @@ span.content01 {
 	font-weight: bold;	
 	
 }
+
+input.button01:hover {
+	
+	background-color: #575757;
+	
+}

@@ -33,12 +33,24 @@
 	<!-- board SQL -->
 	
 	<insert id="writeDao">
-		INSERT INTO q_board(qnum, qid, qname, qcontent, qemail) VALUES (q_board_seq.nextval, #{param1}, #{param2}, #{param3}, #{param4})
+		INSERT INTO q_board(qnum, qid, qname, qcontent, qemail) VALUES (q_board_seq.nextval,#{param1},#{param2},#{param3},#{param4})
 	</insert>
 	
 	<select id="listDao" resultType="com.yjj.myprofile.dto.BoardDto">
 		SELECT * FROM q_board ORDER BY qnum DESC
 	</select>
+	
+	<select id="viewDao" resultType="com.yjj.myprofile.dto.BoardDto">
+		SELECT * FROM q_board WHERE qnum = #{param1 }
+	</select>
+	
+	<update id="boardModify">
+		UPDATE q_board SET qname = #{param1 }, qcontent = #{param2 }, qemail = #{param3 } WHERE qnum = #{param4 }
+	</update>
+	
+	<delete id="deleteDao">
+		DELETE FROM q_board WHERE qnum = #{param1 }
+	</delete>
 	
 	
 </mapper>
