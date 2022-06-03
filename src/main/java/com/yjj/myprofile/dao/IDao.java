@@ -16,6 +16,8 @@ public interface IDao {
 	
 	public void infoModify(String mpw, String mname, String memail, String mid); //회원 정보 수정
 	
+	
+	
 	// 질문 게시판 관련 dao 메서드
 	
 	
