@@ -1,6 +1,7 @@
 package com.yjj.myprofile;
 
 import java.net.http.HttpRequest;
+import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.yjj.myprofile.dao.IDao;
+import com.yjj.myprofile.dto.BoardDto;
 import com.yjj.myprofile.dto.MemberDto;
 
 @Controller
@@ -172,6 +174,34 @@ public class WebController {
 		
 		return "infoModifyOk";
 	}
+	
+	
+	@RequestMapping(value = "/write")
+	public String write(HttpServletRequest request) {
+		
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+		dao.writeDao(request.getParameter("qid"), request.getParameter("qname"), request.getParameter("qcontent"), request.getParameter("qemail"));
+		
+		return "redirect:list";
+	}
+	
+	
+	@RequestMapping(value = "/list")
+	public String list(Model model) {
+		
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+		ArrayList<BoardDto> boardDtos = dao.listDao();
+		
+		model.addAttribute("qlist", boardDtos);
+		
+		return "list";
+	}
+	
+	
+	
+	
 	
 	
 	

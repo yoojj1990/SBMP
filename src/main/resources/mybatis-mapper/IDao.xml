@@ -32,6 +32,13 @@
 	
 	<!-- board SQL -->
 	
+	<insert id="writeDao">
+		INSERT INTO q_board(qnum, qid, qname, qcontent, qemail) VALUES (q_board_seq.nextval, #{param1}, #{param2}, #{param3}, #{param4})
+	</insert>
+	
+	<select id="listDao" resultType="com.yjj.myprofile.dto.BoardDto">
+		SELECT * FROM q_board ORDER BY qnum DESC
+	</select>
 	
 	
 </mapper>

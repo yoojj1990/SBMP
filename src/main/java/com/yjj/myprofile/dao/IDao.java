@@ -1,5 +1,8 @@
 package com.yjj.myprofile.dao;
 
+import java.util.ArrayList;
+
+import com.yjj.myprofile.dto.BoardDto;
 import com.yjj.myprofile.dto.MemberDto;
 
 public interface IDao {
@@ -20,5 +23,8 @@ public interface IDao {
 	
 	// 질문 게시판 관련 dao 메서드
 	
+	public void writeDao(String qid, String qname, String qcontent, String qemail); //글쓰기
+	
+	public ArrayList<BoardDto> listDao(); // 리스트 가져오기 메서드
 	
 }
