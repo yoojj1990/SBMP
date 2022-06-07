@@ -24,7 +24,7 @@
 		</tr>
 		<tr>
 			<td align="center">
-				<span class="title02">프로필 사이트 만들기</span>
+				<span class="title02">코드 공부중</span>
 			</td>
 		</tr>
 		<tr>

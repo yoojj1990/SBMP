@@ -20,7 +20,7 @@
 		</tr>
 		<tr>
 			<td align="center">
-				<span class="title02">프로필 사이트 만들기</span>
+				<span class="title02">코드 공부중</span>
 			</td>
 		</tr>
 		<tr>
@@ -30,8 +30,8 @@
 						<td bgcolor="#d5d5d5" align="center">
 							<span class="content01">
 								안녕하세요.<br>
-								profile 만들기 연습중입니다.<br>
-								내용은 변경 예정입니다.<br>
+								코드 공부중인 유재준입니다.<br>
+								보시고 계신 페이지는 Spring Boot Framework으로 개발되었습니다.<br>
 							</span>
 						<td>
 					</tr>

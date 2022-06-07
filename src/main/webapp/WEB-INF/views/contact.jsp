@@ -20,7 +20,7 @@
 		</tr>
 		<tr>
 			<td align="center">
-				<span class="title02">프로필 사이트 만들기</span>
+				<span class="title02">코드 공부중</span>
 			</td>
 		</tr>
 		<tr>
@@ -29,9 +29,9 @@
 					<tr height="550">
 						<td bgcolor="#d5d5d5" align="center">
 							<span class="content01">
-								안녕하세요.<br>
-								contact 만들기 연습중입니다.<br>
+								안녕하세요 코드 공부중인 유재준입니다.<br>
 								보고 계신 페이지는 Spring Boot Framework으로 개발되었습니다.<br>
+								게시판 이용이 불편하신분은 <a href="yoojj1990@gmail.com">yoojj1990@gmail.com</a>으로 연락부탁드립니다.<br>
 							</span>
 						<td>
 					</tr>
