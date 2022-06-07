@@ -22,7 +22,7 @@
 		</tr>
 		<tr>
 			<td align="center">
-				<span class="title02">코드 공부중</span>
+				<span class="title02">가입</span>
 			</td>
 		</tr>
 		<tr>

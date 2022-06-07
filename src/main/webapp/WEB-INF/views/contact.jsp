@@ -20,7 +20,7 @@
 		</tr>
 		<tr>
 			<td align="center">
-				<span class="title02">코드 공부중</span>
+				<span class="title02">이메일 연락처</span>
 			</td>
 		</tr>
 		<tr>
