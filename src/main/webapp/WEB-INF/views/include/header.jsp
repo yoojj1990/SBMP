@@ -12,7 +12,7 @@
 	<table width="100%" cellspacing="0" border="0" cellpadding="0">
 		<tr height="50" bgcolor="#000000">
 			<td width="60%" class="menu01">&nbsp;</td>
-			<td width="5%" class="menu01"><a href="/">HOME</a></td>
+			<td width="5%" class="menu01"><a href="index">HOME</a></td>
 			<td width="5%" class="menu01">
 				<%
 					String sessionValid = (String) session.getAttribute("id");

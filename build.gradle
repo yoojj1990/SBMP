@@ -2,10 +2,12 @@ plugins {
 	id 'org.springframework.boot' version '2.7.0'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+	id 'war'
 }
 
 group = 'com.yjj'
 version = '0.0.1-SNAPSHOT'
+apply plugin:'war'
 sourceCompatibility = '11'
 
 repositories {
@@ -24,6 +26,12 @@ dependencies {
 	// jsp dependency 설정 추가
 	implementation 'javax.servlet:jstl'
 	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+	
+	
+	// 보안관련 디펜더시
+	implementation 'com.oracle.database.security:oraclepki'
+	implementation 'com.oracle.database.security:osdt_core'
+	implementation 'com.oracle.database.security:osdt_cert'
 	
 	
 }
